@@ -1,0 +1,14 @@
+//abstacts
+@import "~abstracts/_colors.scss", "~abstracts/_mixins.scss";
+
+//core
+@import "~core/_reset.scss", "~core/_typography.scss", "~core/_global.scss";
+
+//components
+@import "~components/_buttons.scss";
+
+//layout
+@import "~layout/_header.scss", "~layout/_footer.scss";
+
+//pages
+@import "~pages/_index.scss", "~pages/_about.scss";
