@@ -1,0 +1,36 @@
+.product {
+  padding: 15px;
+  border: 1px solid #dfdfdf;
+  border-radius: 6px;
+  height: 100%;
+  @include effect(all);
+
+  &__img {
+    background: #fff;
+    height: 300px;
+    padding: 30px;
+    border-bottom: 1px solid #dfdfdf;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  &__description {
+    font-size: 0.8rem;
+    color: #a7a7a7;
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+}

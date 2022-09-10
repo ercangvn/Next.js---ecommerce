@@ -7,7 +7,7 @@ import "../styles/sass/app.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Next.js E-Commerce</title>
 
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </Layout>
+    </>
   );
 }
 

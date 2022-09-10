@@ -25,9 +25,11 @@ export default function Home() {
         <meta property="twitter:description" content="" />
         <meta property="twitter:image" content="" />
       </Head>
-      <div className="row">
-        <div className="col-xxxl-2 col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-7 col-8">
-          home
+      <div className="container">
+        <div className="row">
+          <div className="col-xxxl-2 col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-7 col-8">
+            home
+          </div>
         </div>
       </div>
     </main>
