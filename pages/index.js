@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <Head>
         <title>Home</title>
 
@@ -25,15 +25,10 @@ export default function Home() {
         <meta property="twitter:description" content="" />
         <meta property="twitter:image" content="" />
       </Head>
-
-      <div className={"home-page"}>
-        home page
-        <Image
-          src="/img/vercel.svg"
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
+      <div className="row">
+        <div className="col-xxxl-2 col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-7 col-8">
+          home
+        </div>
       </div>
     </main>
   );

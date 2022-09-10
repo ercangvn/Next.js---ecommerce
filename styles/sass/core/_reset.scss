@@ -18,10 +18,11 @@ img,
 picture,
 video,
 canvas,
-svg {
-  display: block;
+svg,
+iframe {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 input,
 button,

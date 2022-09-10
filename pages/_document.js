@@ -6,10 +6,6 @@ export default function Document() {
       <Head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover"
-        />
         <meta name="theme-color" content="#f5f5f5" />
 
         <link rel="icon" type="image/png" href="../src/dist/img/favicon.png" />
@@ -21,6 +17,7 @@ export default function Document() {
         />
       </Head>
       <body>
+        <Main />
         <NextScript />
       </body>
     </Html>
