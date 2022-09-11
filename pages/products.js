@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/future/image";
+import slugify from "react-slugify";
 
 export default function Products() {
   const [fake, setFake] = useState([]);
@@ -46,22 +47,26 @@ export default function Products() {
             return (
               <>
                 <div className="col-xl-3 col-lg-4 col-6 mb-30" key={values.id}>
-                  <Link href="#">
-                    <div className="product">
-                      <figure className="product__img">
-                        <Image
-                          src={values.image}
-                          alt="{values.title}"
-                          width={384}
-                          height={427}
-                          layout="intrinsic"
-                        />
-                      </figure>
-                      <strong className="product__title">{values.title}</strong>
-                      <p className="product__description">
-                        {values.description}
-                      </p>
-                    </div>
+                  <Link href={`product/${slugify(values.title)}`}>
+                    <a>
+                      <div className="product">
+                        <figure className="product__img">
+                          <Image
+                            src={values.image}
+                            alt={values.title}
+                            width={384}
+                            height={427}
+                            layout="intrinsic"
+                          />
+                        </figure>
+                        <strong className="product__title">
+                          {values.title}
+                        </strong>
+                        <p className="product__description">
+                          {values.description}
+                        </p>
+                      </div>
+                    </a>
                   </Link>
                 </div>
               </>
