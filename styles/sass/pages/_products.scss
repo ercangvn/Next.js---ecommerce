@@ -1,15 +1,19 @@
 .product {
-  padding: 15px;
-  border: 1px solid #dfdfdf;
-  border-radius: 6px;
-  height: 100%;
   @include effect(all);
+  padding: 15px;
+  height: 100%;
+  border: 1px solid $line;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   &__img {
-    background: #fff;
-    height: 300px;
     padding: 30px;
-    border-bottom: 1px solid #dfdfdf;
+    height: 300px;
+    border-bottom: 1px solid $line;
+    background: #fff;
 
     img {
       width: 100%;
@@ -20,14 +24,66 @@
 
   &__title {
     display: block;
+    display: -webkit-box;
+    overflow: hidden;
     margin-top: 15px;
-    margin-bottom: 10px;
+    font-weight: 500;
+    text-overflow: ellipsis;
     font-size: 1rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    small {
+      display: block;
+      color: $text_light;
+      font-weight: 500;
+      font-size: 80%;
+    }
   }
 
   &__description {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    color: $text_light;
+    text-overflow: ellipsis;
     font-size: 0.8rem;
-    color: #a7a7a7;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &__price {
+    display: block;
+    margin-top: 15px;
+    color: $text_light;
+    font-size: 1.4rem;
+
+    small {
+      display: inline-block;
+      margin-left: 10px;
+      color: rgba($text_light, .5);
+      text-decoration: line-through;
+      font-weight: 400;
+      font-size: 80%;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    position: relative;
+
+    small {
+      display: inline-block;
+      font-size: 80%;
+      color: rgba($text_light, .5);
+      margin-left: 4px;
+      position: relative;
+      position: relative;
+      top: -2px;
+    }
   }
 
   &:hover {

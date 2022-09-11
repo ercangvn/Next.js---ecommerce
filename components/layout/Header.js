@@ -62,7 +62,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="menu__item">
-                    <Link href="products">
+                    <Link href="about">
                       <a className="menu__link">About</a>
                     </Link>
                   </li>

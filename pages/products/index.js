@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/future/image";
 import slugify from "react-slugify";
+import ReactStars from "react-stars";
 
 export default function Products() {
   const [fake, setFake] = useState([]);
@@ -40,36 +41,50 @@ export default function Products() {
         <meta property="twitter:description" content="" />
         <meta property="twitter:image" content="" />
       </Head>
-      <div className="container">
-        <h1>Products</h1>
+      <div className="container mt-30">
+        <h1 className="page-title mb-30">Products</h1>
         <div className="row">
           {fake.map((values) => {
             return (
-              <>
-                <div className="col-xl-3 col-lg-4 col-6 mb-30" key={values.id}>
+              <div className="col-xl-3 col-lg-4 col-6 mb-30" key={values.id}>
+                <div className="product">
                   <Link href={`product/${slugify(values.title)}`}>
                     <a>
-                      <div className="product">
-                        <figure className="product__img">
-                          <Image
-                            src={values.image}
-                            alt={values.title}
-                            width={384}
-                            height={427}
-                            layout="intrinsic"
-                          />
-                        </figure>
-                        <strong className="product__title">
-                          {values.title}
-                        </strong>
-                        <p className="product__description">
-                          {values.description}
-                        </p>
+                      <figure className="product__img">
+                        <Image
+                          src={values.image}
+                          alt={values.title}
+                          width={384}
+                          height={427}
+                          layout="intrinsic"
+                          priority
+                        />
+                      </figure>
+                      <strong className="product__title">
+                        {values.title}
+                        <small>{values.category}</small>
+                      </strong>
+                      <div className="product__rating">
+                        <ReactStars
+                          count={values.rating.rate}
+                          size={16}
+                          value={values.rating.rate}
+                          color2={"#ffd700"}
+                          edit={false}
+                        />
+                        <small>({values.rating.count})</small>
                       </div>
+                      <p className="product__description">
+                        {values.description}
+                      </p>
+                      <strong className="product__price">
+                        ${values.price}
+                        <small>${values.price * 2}</small>
+                      </strong>
                     </a>
                   </Link>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

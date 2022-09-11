@@ -1,0 +1,72 @@
+.flex {
+  display: flex;
+  flex: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vertical-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fadeIn {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.fadeInTop {
+  animation: fadeInTop 0.25s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInTop {
+  from {
+    margin-top: 30px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+$i: 0;
+@while $i < 30 {
+  $i: $i + 5;
+
+  .ml-#{$i} {
+    margin-left: ($i * 1px);
+  }
+}
+$i: 0;
+@while $i < 70 {
+  $i: $i + 5;
+
+  .mt-#{$i} {
+    margin-top: ($i * 1px);
+  }
+}
+$i: 0;
+@while $i < 30 {
+  $i: $i + 5;
+
+  .mr-#{$i} {
+    margin-right: ($i * 1px);
+  }
+}
+$i: 0;
+@while $i < 70 {
+  $i: $i+ 5;
+
+  .mb-#{$i} {
+    margin-bottom: ($i * 1px);
+  }
+}
